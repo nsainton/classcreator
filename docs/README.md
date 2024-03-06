@@ -50,5 +50,47 @@ This script can be executed in 3 distinct ways :
 
 ## What will I get after executing the Script ?
 
-Let's run the command : `./classcreator Test header sources` in an empty directory <br/>
-We will get two new files : sou
+Let's run the command : `./classcreator Test includes sources` in an empty directory <br/>
+We will get two new files : sources/Test.cpp and includes/Test.h
+
+> :bulb: Both of these files are also available in the "examples" folder
+
+This is what the [Test.h](/examples/Test.h) file looks like :
+```cpp
+#ifndef __TEST_H__
+# define __TEST_H__
+
+class	Test{
+	public:
+		Test();
+		Test( const Test & );
+		Test& operator=( const Test & );
+		virtual ~Test();
+};
+#endif
+```
+
+This is what the [Test.cpp](/examples/Test.cpp) file looks like :
+```cpp
+#include "Test.h"
+#include <iostream>
+
+Test::Test(){
+	std::clog << "Test Default Constructor Called" << std::endl;
+}
+
+Test::Test( const Test & other ){
+	std::clog << "Test Copy Constructor Called" << std::endl;
+	(void)other;
+}
+
+Test&	Test::operator=( const Test & other ){
+	std::clog << "Test Copy Assignment Operator Called" << std::endl;
+	(void)other;
+	return (*this);
+}
+
+Test::~Test(){
+	std::clog << "Test Destructor Called" << std::endl;
+}
+```
