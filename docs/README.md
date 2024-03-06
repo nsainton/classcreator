@@ -42,15 +42,15 @@ Although they do absolutely nothing apart from writting the functions that are c
 ## What arguments can I provide to the Script?
 
 This script can be executed in 3 distinct ways :
-1.	./classcreator Classname -> creates a Classname.cpp and Classname.h class file in the current directory
-2.	./classcreator Classname dir -> creates a dir/Classname.cpp and a dir/Classname.h file in the specified directory
-3.	./classcreator Classname header\_dir class\_dir -> creates a header\_dir/classname.h and a class\_dir/classname.cpp file in the specified directories and source files
+1.	sh classcreator.sh Classname -> creates a Classname.cpp and Classname.h class file in the current directory
+2.	sh classcreator.sh Classname dir -> creates a dir/Classname.cpp and a dir/Classname.h file in the specified directory
+3.	sh classcreator.sh Classname header\_dir class\_dir -> creates a header\_dir/classname.h and a class\_dir/classname.cpp file in the specified directories and source files
 
 > :bulb: Any non-existent directory will be created by the script
 
 ## What will I get after executing the Script ?
 
-Let's run the command : `./classcreator Test includes sources` in an empty directory <br/>
+Let's run the command : `sh classcreator.sh Test includes sources` in an empty directory <br/>
 We will get two new files : sources/Test.cpp and includes/Test.h
 
 > :bulb: Both of these files are also available in the "examples" folder
@@ -94,3 +94,22 @@ Test::~Test(){
 	std::clog << "Test Destructor Called" << std::endl;
 }
 ```
+
+The Test.cpp source file can be compiled right away without raising any warning.
+
+## Get Help
+
+Run the script without any argument :
+```bash
+sh classcreator.sh
+```
+
+To get a help message about how to run the script.
+
+## Contributing
+
+There are two ways to contribute to this project
+- Send me a message on discord (for 42 students) or to the following [email](mailto:nsainton@student.42.fr?subject=[classcreator])
+- Pull requests that are currently closed but are going to be oppened soon for you to add all your amazing features to the project
+
+## Demo Video
