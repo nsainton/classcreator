@@ -1,6 +1,6 @@
 # Classcreator : CPP classes designed in Orthodox Canonical Form
 
-> :fr: French documentation available [here](#)
+> :fr: French documentation available [here](/docs/README.fr.md)
 
 ## How to use it ?
 
