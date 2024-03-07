@@ -21,7 +21,7 @@ bash <(curl -fsSL --connect-timeout 10 https://raw.githubusercontent.com/nsainto
 <blockquote>
 
 ```bash
-curl -fsSL --connect-timeout 10 https://raw.githubusercontent.com/nsainton/classcreator/main/classcreator.sh -o sh /tmp/classcreator.sh && /tmp/classcreator.sh Classname header_dir sources_dir
+curl -fsSL --connect-timeout 10 https://raw.githubusercontent.com/nsainton/classcreator/main/classcreator.sh -o /tmp/classcreator.sh && sh /tmp/classcreator.sh Classname header_dir sources_dir
 ```
 
 </blockquote>
@@ -36,7 +36,7 @@ This class will contain :
 3.	A copy assignment operator `Classname & Classname::Classname( const Classname & other )`
 4.	A virtual destructor `Classname::~Classname()`
 
-It is design to comply with the Orthodox canonical form and is such that the file outputed by the Script will compile right away with all the compiler warnings enabled. <br/>
+It is designed to comply with the Orthodox canonical form and is such that the file outputed by the Script will compile right away with all the compiler warnings enabled. <br/>
 Although they do absolutely nothing apart from writting the functions that are called to std::clog ostream object.
 
 ## What arguments can I provide to the Script?
@@ -53,7 +53,7 @@ This script can be executed in 3 distinct ways :
 Let's run the command : `sh classcreator.sh Test includes sources` in an empty directory <br/>
 We will get two new files : sources/Test.cpp and includes/Test.h
 
-> :bulb: Both of these files are also available in the "examples" folder
+> :bulb: Both files are also available in the "examples" folder
 
 This is what the [Test.h](/examples/Test.h) file looks like :
 ```cpp
@@ -67,6 +67,7 @@ class	Test{
 		Test& operator=( const Test & );
 		virtual ~Test();
 };
+
 #endif
 ```
 
