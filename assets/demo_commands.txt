@@ -9,3 +9,4 @@ bat sources/Test.cpp | printing the Test class source file
 c++ -Wall -Wextra -Werror -c sources/Test.cpp -iquote includes -o Test.o | compiling the sources/Test.cpp file into a Test.o file with all compiler warnings enabled
 ls | listing the elements present at the end of the script execution to ensure that the Test.o file has been created
 @cd -
+@if [ "${OLDPWD:0:8}" = "/tmp/tmp" ] ; then rm -rf "${OLDPWD}"; fi
