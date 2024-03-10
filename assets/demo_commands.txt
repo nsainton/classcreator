@@ -1,3 +1,4 @@
+@cd "$(mktemp -d)"
 @if [ ! -f "classcreator.sh" ] ; then curl -fsSL https://raw.githubusercontent.com/nsainton/classcreator/main/classcreator.sh -O ; fi
 ls | listing the elements in the directory before the script execution
 sh classcreator.sh Test includes sources | Creating the Test class by creating the file includes/Test.h and the file sources/Test.cpp
@@ -7,3 +8,4 @@ bat includes/Test.h | printing the Test class header file
 bat sources/Test.cpp | printing the Test class source file
 c++ -Wall -Wextra -Werror -c sources/Test.cpp -iquote includes -o Test.o | compiling the sources/Test.cpp file into a Test.o file with all compiler warnings enabled
 ls | listing the elements present at the end of the script execution to ensure that the Test.o file has been created
+@cd -
