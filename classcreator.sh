@@ -106,23 +106,20 @@ create_class(){
 #include <iostream>
 
 $class::$class(){
-	std::clog << "$class Default Constructor Called" << std::endl;
 }
 
 $class::$class( const $class & other ){
-	std::clog << "$class Copy Constructor Called" << std::endl;
 	(void)other;
 }
 
 $class&	$class::operator=( const $class & other ){
-	std::clog << "$class Copy Assignment Operator Called" << std::endl;
 	(void)other;
 	return (*this);
 }
 
 $class::~$class(){
-	std::clog << "$class Destructor Called" << std::endl;
 }
+
 CLASSFILE
 	return 0
 }
