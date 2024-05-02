@@ -72,23 +72,18 @@ class	Test{
 Voici à quoi ressemble le fichier [Test.cpp](/examples/Test.cpp) :
 ```cpp
 #include "Test.h"
-#include <iostream>
 
 Test::Test(){
-    std::clog << "Constructeur par défaut de la classe Test appelé" << std::endl;
 }
 
 Test::Test( const Test & autre ){
-    std::clog << "Constructeur de copie de la classe Test appelé" << std::endl;
 }
 
 Test&	Test::operator=( const Test & autre ){
-    std::clog << "Opérateur d'assignation par copie de la classe Test appelé" << std::endl;
     return (*this);
 }
 
 Test::~Test(){
-    std::clog << "Destructeur de la classe Test appelé" << std::endl;
 }
 ```
 
