@@ -103,7 +103,6 @@ create_class(){
 	if ! create_file "$classfile" ; then return 1 ; fi
 	cat >"$classfile" <<CLASSFILE
 #include "${class}.h"
-#include <iostream>
 
 $class::$class(){
 }
