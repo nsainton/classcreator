@@ -1,5 +1,5 @@
 @cd "$(mktemp -d)"
-@if [ ! -f "classcreator.sh" ] ; then curl -fsSL https://raw.githubusercontent.com/nsainton/classcreator/main/classcreator.sh -O ; fi
+@if [ ! -f "classcreator.sh" ] ; then curl -fsSL https://raw.githubusercontent.com/nsainton/classcreator/master/classcreator.sh -O ; fi
 ls | listing the elements in the directory before the script execution
 sh classcreator.sh Test includes sources | Creating the Test class by creating the file includes/Test.h and the file sources/Test.cpp
 ls | listing the elements in the directory after the script execution
